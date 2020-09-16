@@ -67,14 +67,13 @@ public function login()
 		if($guestId >0) 
 		{
 			$guestData = $this->Admin_model->getUserData($guestId);
-			$frndData = $this->Admin_model->getFriendData($guestId);
+			$frndData  = $this->Admin_model->getFriendData($guestId);
 
 			if (!empty($guestData)) 
 			{			
 			$this->load->view('admin/customerDetails',['guestData'=>$guestData,'frndData'=>$frndData]);
 			}
-		}
-		
+		}		
         
 	}	
 }  
